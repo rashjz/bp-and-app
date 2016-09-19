@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="0dp"
+    android:paddingLeft="0dp">
+
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="100dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="6dp"
+        android:horizontalSpacing="6dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center|top"
+        android:listSelector="@drawable/list_row_selector"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp" />
+
+</android.support.v4.widget.SwipeRefreshLayout>

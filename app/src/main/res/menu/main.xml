@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <!-- Search Widget -->
+    <item android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:title="Search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
+
+    <!--<item android:id="@+id/action_example" android:title="@string/log_in"-->
+        <!--app:showAsAction="withText|ifRoom" />-->
+
+    <item android:id="@+id/action_settings" android:title="@string/settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/pref_lang" android:title="@string/language"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/pref_about" android:title="@string/about"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/pref_exit" android:title="@string/exit"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+</menu>

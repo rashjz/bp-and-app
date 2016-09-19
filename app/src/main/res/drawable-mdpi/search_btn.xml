@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+            <gradient android:angle="270"
+                android:endColor="#72484cb5"
+                android:startColor="#72484cb5" />
+            <corners android:radius="90dp" />
+        </shape>
+    </item>
+
+
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+            <gradient android:angle="270"
+                android:endColor="@color/wallet_highlighted_text_holo_light"
+                android:startColor="@color/common_action_bar_splitter" />
+            <corners android:radius="90dp" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen>
+
+    <!--<PreferenceCategory android:title="@string/pref_about" >-->
+        <!--<EditTextPreference-->
+            	<!--android:title="@string/a"-->
+            	<!--android:summary="@string/pref_about_summary"-->
+            	<!--android:key="prefIpAddress"/>-->
+    <!--</PreferenceCategory>-->
+    
+
+
+</PreferenceScreen>

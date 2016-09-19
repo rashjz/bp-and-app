@@ -1,0 +1,28 @@
+<rashjz.info.bakuposter.com.adapter.SmartSlidingPane
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slidingPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/activity_menu" />
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:orientation="vertical">
+
+
+        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+</rashjz.info.bakuposter.com.adapter.SmartSlidingPane>

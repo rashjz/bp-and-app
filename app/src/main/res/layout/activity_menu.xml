@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:backgroundTintMode="multiply"
+    android:background="@drawable/aurina">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/applogo"
+        android:layout_gravity="center|top"
+        android:src="@drawable/applogo" />
+
+    <TextView
+        android:id="@+id/catTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_row="0"
+        android:text="@string/category_view"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:id="@+id/spinnerDropDown"
+        android:paddingLeft="20dp"
+        android:textSize="13sp"
+        android:layout_marginTop="3dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginLeft="10dp"
+        android:layout_row="0"
+        android:text="@string/key_search"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="3dp" />
+
+    <EditText
+        android:id="@+id/titleEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_row="0"
+        android:textSize="13sp"
+        style="@android:style/Widget.Holo.Spinner"
+        android:hint="@string/hind_key_search"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:inputType="text"
+        android:focusableInTouchMode="true" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginLeft="10dp"
+        android:layout_row="1"
+        android:text="@string/start_date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="3dp" />
+    <rashjz.info.bakuposter.com.adapter.DateDisplayPicker
+        android:id="@+id/dateFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.Spinner"
+        android:hint="@string/start_date_hint"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="3dp" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_marginLeft="10dp"
+        android:layout_row="1"
+        android:text="@string/end_date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="3dp" />
+
+    <rashjz.info.bakuposter.com.adapter.DateDisplayPicker
+        android:id="@+id/dateTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.Spinner"
+        android:hint="@string/end_date_hint"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="3dp" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_column="1"
+        android:layout_marginTop="10dp"
+        android:layout_row="2"
+        android:enabled="true"
+        android:text="@string/search_btn"
+        android:textStyle="bold"
+        android:background="@drawable/round_button"
+        android:layout_gravity="right"
+        android:layout_marginRight="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LangDialogFragment"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical|center_horizontal"
+    android:focusable="false"
+    android:layoutMode="clipBounds"
+    android:theme="@style/Base.Animation.AppCompat.Dialog">
+
+    <Button
+        android:id="@+id/btnEN"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="@string/btnEn"
+        android:background="@drawable/round_button"
+        android:focusable="true"
+        android:textStyle="bold"
+        android:singleLine="false"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <Button
+        android:id="@+id/btnAZ"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:background="@drawable/round_button"
+        android:text="@string/btnAz"
+        android:focusable="true"
+        android:textStyle="bold"
+        android:singleLine="false"
+        android:layout_marginTop="1dp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <Button
+        android:id="@+id/btnRU"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:text="@string/btnRu"
+        android:background="@drawable/round_button"
+        android:focusable="true"
+        android:textStyle="bold"
+        android:singleLine="false"
+        android:layout_marginTop="1dp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+</LinearLayout>

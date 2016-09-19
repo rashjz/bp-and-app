@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="light_green">#a012ba21</color>
+    <color name="light_red">#c2e63c1f</color>
+    <color name="white_blue">#1c274ea8</color>
+    <color name="light_blue">#8f2f41b3</color>
+
+    <color name="fab_color_1">#ff5252</color>
+    <color name="fab_color_1_muted">#ff8080</color>
+    <color name="fab_color_2">#9c27b0</color>
+    <color name="fab_color_2_muted">#a56ab0</color>
+
+    <color name="actionbar">#3cb879</color>
+    <color name="body_background">#e8e8e8</color>
+    <color name="body_background_green">#82e783</color>
+    <color name="server_status_bar">#2b2b2b</color>
+    <color name="title_gray">#434343</color>
+    <color name="white">#ffffff</color>
+    <color name="bg_msg_you">#5eb964</color>
+    <color name="bg_msg_from">#e5e7eb</color>
+    <color name="msg_border_color">#a1a1a1</color>
+    <color name="bg_btn_join">#1e6258</color>
+    <color name="bg_msg_input">#e8e8e8</color>
+    <color name="text_msg_input">#626262</color>
+    <color name="lblFromName">#777777</color>
+</resources>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<include layout="@layout/selected_item_footer" />-->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:divider="@drawable/footer_divider"
+        android:dividerPadding="1dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:background="@drawable/purple_button">
+
+        <ImageButton
+            android:id="@+id/likeBtn"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/emp_like"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/commentBtn"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chaticon"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/shareBtn"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/share"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/playBtn"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/mapBtn"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/map"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/calBtn"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/calendar"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/itemScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footer">
+
+        <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+        <!--android:id="@+id/fullView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+
+        <!--test-->
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:autoText="false"
+                android:textColor="#d5a12e1d"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentTop="false"
+                android:src="@mipmap/ic_launcher"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="2dp" />
+
+            <!-- Movie Title -->
+            <!--<ImageButton-->
+                <!--android:id="@+id/playBtn"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentTop="false"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:backgroundTintMode="multiply"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--android:src="@drawable/play"-->
+                <!--android:background="@android:color/transparent" />-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/mapBtn"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentTop="false"-->
+                <!--android:layout_below="@+id/playBtn"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:backgroundTintMode="multiply"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:src="@drawable/map"-->
+                <!--android:background="@android:color/transparent" />-->
+
+            <!-- Rating -->
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thumbnail"
+                android:layout_marginTop="5dp"
+                android:autoText="false"
+                android:textColor="#78020205"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <!-- Genre -->
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating"
+                android:layout_marginTop="5dp"
+                android:autoText="false"
+                android:textColor="#78020205"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <!-- Genre -->
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/genre"
+                android:layout_marginTop="5dp"
+                android:autoText="false"
+                android:textColor="#78020205"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <!-- Release Year -->
+            <TextView
+                android:id="@+id/releaseYear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="false"
+                android:layout_below="@+id/desc"
+                android:layout_marginTop="5dp"
+                android:autoText="false"
+                android:textColor="#78020205"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/releaseYear"
+                android:numStars="5"
+                android:stepSize="0.25"
+                android:isIndicator="false"
+                style="@style/foodRatingBar"
+                android:layout_marginTop="5dp" />
+            <!--android:progressDrawable="@drawable/ratingbar_red"-->
+
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/ratingBar"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp" />
+
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id"
+                android:layout_below="@+id/map">
+            </com.google.android.gms.ads.AdView>
+        </RelativeLayout>
+
+
+        <!--<include layout="@layout/selected_item_footer"
+        tools:context="app.info.rashjz.amuse.activity.SelectedItemActivity"/>-->
+        <!-- Footer layout_alignParentBottom to bottom -->
+
+
+    </ScrollView>
+</RelativeLayout>

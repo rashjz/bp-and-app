@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Login with social network"
+        android:id="@+id/header"
+        android:layout_gravity="center_horizontal"
+        style="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <LinearLayout
+        android:id="@+id/llProfile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:layout_gravity="left|top" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingRight="10sp" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.07"
+        android:paddingTop="15sp"
+        android:paddingBottom="10sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="15sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp" />
+
+
+
+
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:text="Log Out"
+        android:visibility="gone" 
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/red_button" />
+
+    <Button
+        android:id="@+id/btn_revoke_access"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:text="Revoke Access"
+        android:visibility="gone"
+        android:background="@drawable/red_button"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>
