@@ -110,7 +110,7 @@ public class TheatreFragment extends Fragment implements SwipeRefreshLayout.OnRe
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("Authorization", "cmFzaGp6OnBhcmtldDQ3MA==");
+                params.put("Authorization", "xxxxxxxxxxxxx==");
                 return params;
             }
         };
@@ -127,11 +127,7 @@ public class TheatreFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                boolean enable = false;
-                /**
-                 * This enables us to force the layout to refresh only when the first item
-                 * of the list is visible.
-                 **/
+                boolean enable = false; 
                 if (listView != null && listView.getChildCount() > 0) {
                     // check if the first item of the list is visible
                     boolean firstItemVisible = listView.getFirstVisiblePosition() == 0;
@@ -141,22 +137,13 @@ public class TheatreFragment extends Fragment implements SwipeRefreshLayout.OnRe
                     enable = firstItemVisible && topOfFirstItemVisible;
                 }
                 swipeRefreshLayout.setEnabled(enable);
-//                if (enable) {
-//                    actionBar.show();
-//                } else {
-//                    actionBar.hide();
-//                }
-
+ 
             }
         });
 
     }
 
-    public void startSwiperRefresh() {
-//        swipeRefreshLayout.setColorSchemeColors(
-//                android.R.color.holo_blue_bright,
-//                android.R.color.holo_blue_dark,
-//                android.R.color.holo_purple);
+    public void startSwiperRefresh() { 
         swipeRefreshLayout.setOnRefreshListener(this);
 
         swipeRefreshLayout.post(new Runnable() {
