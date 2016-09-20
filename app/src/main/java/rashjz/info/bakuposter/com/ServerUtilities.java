@@ -139,7 +139,7 @@ public final class ServerUtilities {
             conn.setFixedLengthStreamingMode(bytes.length);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
-            conn.setRequestProperty("Authorization", "cmFzaGp6OnBhcmtldDQ3MA==");
+            conn.setRequestProperty("Authorization", "xxxxxxxxxxxxxxx");
             // post the request
             OutputStream out = conn.getOutputStream();
             out.write(bytes);
