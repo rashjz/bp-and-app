@@ -115,23 +115,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         } else {
             model.setType_id(BigDecimal.ZERO);
         }
-        System.out.println("'''''' "
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                +getIntent().getStringExtra("searchType")+" "+model.getTitle()+" "+model.getType_id());
-//        Message.message(getBaseContext(), model.toString());
+  
         Gson gson = new Gson();
         String json = gson.toJson(model);
         RequestQueue queue = AppController.getInstance().getRequestQueue();
@@ -156,7 +140,7 @@ public class SearchResultsActivity extends AppCompatActivity {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("Authorization", "cmFzaGp6OnBhcmtldDQ3MA==");
+                params.put("Authorization", "xxxxxxxxxxxxxx==");
                 return params;
             }
         };
