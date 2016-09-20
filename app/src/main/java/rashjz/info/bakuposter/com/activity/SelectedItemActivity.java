@@ -299,12 +299,11 @@ public class SelectedItemActivity extends AppCompatActivity {
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
 //                params.put("Content-Type", "application/json");
-                params.put("Authorization", "cmFzaGp6OnBhcmtldDQ3MA==");
+                params.put("Authorization", "xxxxxxxxxxxxxxxxxxx==");
                 return params;
             }
         };
-        queue.add(request);
-        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ " + request.toString());
+        queue.add(request); 
     }
 
 
