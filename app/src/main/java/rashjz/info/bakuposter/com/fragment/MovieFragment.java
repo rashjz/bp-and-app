@@ -116,7 +116,7 @@ public class MovieFragment extends Fragment implements SwipeRefreshLayout.OnRefr
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
 //                params.put("Content-Type", "application/json");
-                params.put("Authorization", "cmFzaGp6OnBhcmtldDQ3MA==");
+                params.put("Authorization", "xxxxxxxxxxxxxxx==");
                 return params;
             }
         };
