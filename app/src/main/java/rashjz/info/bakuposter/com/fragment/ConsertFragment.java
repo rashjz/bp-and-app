@@ -105,7 +105,7 @@ public class ConsertFragment extends Fragment implements SwipeRefreshLayout.OnRe
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("Authorization", "cmFzaGp6OnBhcmtldDQ3MA==");
+                params.put("Authorization", "xxxxxxxxxxxxxxx==");
                 return params;
             }
         };
