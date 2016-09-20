@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Bakuposter</string>
-    <string name="banner_ad_unit_id">ca-app-pub-9257288331240431/5904738209</string>
-    <string name="facebookID" translatable="false">888848437872798</string>
+    <string name="banner_ad_unit_id">ca-app-pub-xxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    <string name="facebookID" translatable="false">xxxxxxxxxxxxxxx</string>
 
     <string name="main_menu">Main Menu</string>
     <string name="exit">Exit</string>
