@@ -76,9 +76,6 @@ public class ConsertAdapter extends ArrayAdapter<Movie> {
                 genreStr.length() - 2) : genreStr;
         genre.setText(genreStr);
 
-        // release year
-//        year.setText(String.valueOf(m.getYear()));
-
         convertView.setTag(m);
         return convertView;
 

@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
+import rashjz.info.bakuposter.com.util.Config;
 import rashjz.info.bakuposter.com.util.PreferenceUtil;
 
 import static rashjz.info.bakuposter.com.CommonUtilities.SERVER_URL;
@@ -139,7 +140,7 @@ public final class ServerUtilities {
             conn.setFixedLengthStreamingMode(bytes.length);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
-            conn.setRequestProperty("Authorization", "xxxxxxxxxxxxxxx");
+            conn.setRequestProperty(Config.headerParamName, Config.headerParam);
             // post the request
             OutputStream out = conn.getOutputStream();
             out.write(bytes);

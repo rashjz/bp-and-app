@@ -14,7 +14,7 @@ import rashjz.info.bakuposter.com.util.Config;
 
 
 /**
- * Created by Mobby on 9/19/2015.
+ * Created by Rashad Javadov on 9/19/2015.
  */
 public class VideoActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 

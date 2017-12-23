@@ -49,6 +49,7 @@ public class JsonUtil {
                 JSONObject object=  response.getJSONObject(i);
                 gson = new Gson();
                 gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
+//                gson = new GsonBuilder().setDateFormat("MMM dd, yyyy hh:mm:ss a").create();
                 mJson = new JsonParser().parse(object.toString());
                 result.add(gson.fromJson(mJson, ListItem.class));
             }
@@ -62,7 +63,7 @@ public class JsonUtil {
         ListItem result = new ListItem();
         try {
             gson = new Gson();
-            gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
+            gson = new GsonBuilder().setDateFormat("MMM dd, yyyy hh:mm:ss a").create();
             mJson = new JsonParser().parse(response.toString());
             result= gson.fromJson(mJson, ListItem.class);
         } catch (Throwable t) {

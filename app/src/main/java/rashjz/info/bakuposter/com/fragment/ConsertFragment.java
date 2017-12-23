@@ -82,7 +82,6 @@ public class ConsertFragment extends Fragment implements SwipeRefreshLayout.OnRe
         model = new SearchModel();
         model.setFrom(0);
         model.setTo(100);
-//        model.setTitle("Javad");
         model.setType_id(new BigDecimal(2));
         Gson gson = new Gson();
         String json = gson.toJson(model);
@@ -105,7 +104,7 @@ public class ConsertFragment extends Fragment implements SwipeRefreshLayout.OnRe
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("Authorization", "xxxxxxxxxxxxxxx==");
+                params.put(Config.headerParamName, Config.headerParam);
                 return params;
             }
         };

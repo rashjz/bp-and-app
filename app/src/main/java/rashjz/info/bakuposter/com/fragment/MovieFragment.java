@@ -89,7 +89,7 @@ public class MovieFragment extends Fragment implements SwipeRefreshLayout.OnRefr
         model.setFrom(0);
         model.setTo(100);
 //        model.setTitle("Javad");
-        model.setType_id(new BigDecimal(1));
+        model.setType_id(BigDecimal.ONE);
         Gson gson = new Gson();
         String json = gson.toJson(model);
         System.out.println("***** "+json);
@@ -99,6 +99,7 @@ public class MovieFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
+                        System.out.println(response.toString()+"******+++++");
                         movieList = JsonUtil.downloadContentList(response);
                         adapter.setmItems(movieList);
                         adapter.notifyDataSetChanged();
@@ -107,6 +108,7 @@ public class MovieFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
                         System.out.println("-----------downloadContentList---------- " + error.toString());
                     }
                 }
@@ -114,9 +116,9 @@ public class MovieFragment extends Fragment implements SwipeRefreshLayout.OnRefr
         ){
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String, String> params = new HashMap<String, String>();
+                Map<String, String> params = new HashMap<>();
 //                params.put("Content-Type", "application/json");
-                params.put("Authorization", "xxxxxxxxxxxxxxx==");
+                params.put(Config.headerParamName, Config.headerParam);
                 return params;
             }
         };

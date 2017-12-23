@@ -7,7 +7,7 @@
     <bool name="ga_autoActivityTracking">true</bool>
 
     <!--  The property id associated with this analytics tracker -->
-    <string name="ga_trackingId">UA-xxxx-2</string>
+    <string name="ga_trackingId">UA-48542784-2</string>
 
 
     <!--Cloud Messaging-->
@@ -16,8 +16,8 @@
     <!--keytoolcertificate-->
     <string name="SHA1_RASH">E5:A9:58:8B:5E:3A:9A:CD:78:29:15:15:80:89:04:89:A8:8E:52:A1</string>
     <string name="SHA1_MOBB">12:65:91:DD:87:C7:24:80:58:46:81:92:85:2F:36:F0:F1:49:43:AE</string>
-    <string name="FACEBOOK_BASE64_MOBB">xxxxxxxxxxxx/c/xxxxxxxxx=</string>
-    <string name="FACEBOOK_BASE64_EV">xxxxxxxxxxxxxxx/xxxxxx=</string>
+    <string name="FACEBOOK_BASE64_MOBB">81moon4OaPOlvDKPcGb/c/VEQqU=</string>
+    <string name="FACEBOOK_BASE64_EV">b88KSsuv6DjF8s3jh/jyxPDLS3w=</string>
 
     <!--
       C:\Program Files\Java\jdk1.7.0_51\bin>keytool.exe -exportcert -alias androiddebugkey -keystore "C:\Users\Mobby\.android\debug.keystore" |

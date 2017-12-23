@@ -53,7 +53,7 @@ public class SelectedItemActivity extends AppCompatActivity {
     NetworkImageView thumbNail;
 
     private GoogleMap googleMap;
-    private ImageButton mapBtn, playBtn, commentBtn, likeBtn, shareBtn,calBtn;
+    private ImageButton mapBtn, playBtn, commentBtn, likeBtn, shareBtn, calBtn;
     private RatingBar ratingBar;
     private ScrollView itemScroll;
     private JsonObjectRequest request;
@@ -89,17 +89,14 @@ public class SelectedItemActivity extends AppCompatActivity {
 
         thumbNail.setImageUrl(item.getImg_url(), imageLoader);
 
-//data
 
-
-
-        title.setText("" +item.getTitle());
+        title.setText("" + item.getTitle());
         rating.setText("Reytinq : " + item.getRating());
         genre.setText("Janr : " + item.getGenre());
         if (item.getDescription() != null) {
             desc.setText("Şərh : " + item.getDescription());
         }
-        year.setText("İl : " +item.getRelease_year());
+        year.setText("İl : " + item.getRelease_year());
 
         mapBtn = (ImageButton) findViewById(R.id.mapBtn);
 
@@ -164,7 +161,6 @@ public class SelectedItemActivity extends AppCompatActivity {
             }
         });
 
-        System.out.println("==========" + item.getLike_status());
         likeBtn = (ImageButton) findViewById(R.id.likeBtn);
 
 
@@ -195,7 +191,7 @@ public class SelectedItemActivity extends AppCompatActivity {
                 shareIntent.setType("*/*");
                 shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, item.getTitle());
                 shareIntent.putExtra(Intent.EXTRA_TEXT, item.getDescription());
-                shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File( item.getImg_url())));  //optional//use this when you want to send an image
+                shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(item.getImg_url())));  //optional//use this when you want to send an image
                 shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 startActivity(Intent.createChooser(shareIntent, "PAYLAŞIM ET"));
             }
@@ -206,16 +202,16 @@ public class SelectedItemActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Calendar cal = Calendar.getInstance();
-               if(item.getEnd_date()!=null){
-                   cal.setTime(item.getEnd_date());
-               }
+                if (item.getEnd_date() != null) {
+                    cal.setTime(item.getEnd_date());
+                }
                 Intent intent = new Intent(Intent.ACTION_EDIT);
                 intent.setType("vnd.android.cursor.item/event");
                 intent.putExtra("beginTime", cal.getTimeInMillis());
                 intent.putExtra("allDay", true);
                 intent.putExtra("rrule", "FREQ=YEARLY");
-                intent.putExtra("endTime", cal.getTimeInMillis()+60*60*1000);
-                intent.putExtra("title",item.getTitle().toString());
+                intent.putExtra("endTime", cal.getTimeInMillis() + 60 * 60 * 1000);
+                intent.putExtra("title", item.getTitle().toString());
                 startActivity(intent);
             }
         });
@@ -236,15 +232,13 @@ public class SelectedItemActivity extends AppCompatActivity {
 //        item.setRec_id(new BigDecimal(recid));
         Gson gson = new Gson();
         String json = gson.toJson(item);
-        System.out.println("------------ " + json.toString());
         RequestQueue queue = AppController.getInstance().getRequestQueue();
-        System.out.println("getItemdata:::::::::::::: " + json);
+        System.out.println("getItemdata : " + json);
         request = new JsonObjectRequest(Request.Method.POST, Config.getItemdata, json,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         item = JsonUtil.downloadContentItemData(response);
-                        System.out.println(" ------------ like" + item.getLike_status());
                         if (item.getLike_status() == 1) {
                             likeBtn.setTag("like");
                             likeBtn.setImageResource(R.drawable.like);
@@ -264,13 +258,12 @@ public class SelectedItemActivity extends AppCompatActivity {
                 }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("Authorization", "xxxxxxxxxxxx==");
+                Map<String, String> params = new HashMap<>();
+                params.put(Config.headerParamName, Config.headerParam);
                 return params;
             }
         };
         queue.add(request);
-        System.out.println(" ------------ like" + item.getLike_status());
         return item;
     }
 
@@ -286,7 +279,7 @@ public class SelectedItemActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        System.out.println("**--**--*--**---- " + response);
+                        System.out.println("json object response : " + response);
                     }
                 },
                 new Response.ErrorListener() {
@@ -294,16 +287,16 @@ public class SelectedItemActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         System.out.println("-------------VOLLEYERROR--------- " + error.toString());
                     }
-                }){
+                }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
 //                params.put("Content-Type", "application/json");
-                params.put("Authorization", "xxxxxxxxxxxxxxxxxxx==");
+                params.put(Config.headerParamName, Config.headerParam);
                 return params;
             }
         };
-        queue.add(request); 
+        queue.add(request);
     }
 
 

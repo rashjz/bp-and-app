@@ -37,7 +37,6 @@ public class SmartSlidingPane extends SlidingPaneLayout {
             case MotionEvent.ACTION_DOWN: {
                 mInitialMotionX = ev.getX();
                 mInitialMotionY = ev.getY();
-//                Message.message( getContext(), "sssssssssssssssssssss");
                 break;
             }
 

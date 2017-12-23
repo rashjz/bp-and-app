@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Bakuposter.iml" filepath="$PROJECT_DIR$/Bakuposter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bp-and-app.iml" filepath="$PROJECT_DIR$/bp-and-app.iml" />
     </modules>
   </component>
 </project>

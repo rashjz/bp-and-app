@@ -48,6 +48,7 @@ public class SearchResultsActivity extends AppCompatActivity {
     private SearchModel model = new SearchModel();
     private List<ListItem> searchList = new ArrayList<ListItem>();
     private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,7 +116,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         } else {
             model.setType_id(BigDecimal.ZERO);
         }
-  
+
         Gson gson = new Gson();
         String json = gson.toJson(model);
         RequestQueue queue = AppController.getInstance().getRequestQueue();
@@ -134,13 +135,13 @@ public class SearchResultsActivity extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         System.out.println("--------------------- " + error.toString());
                         progressDialog.dismiss();
-                        Message.message(getApplicationContext(),"Sorğu nəticə vermədi!");
+                        Message.message(getApplicationContext(), "Sorğu nəticə vermədi!");
                     }
                 }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("Authorization", "xxxxxxxxxxxxxx==");
+                params.put(Config.headerParamName, Config.headerParam);
                 return params;
             }
         };
