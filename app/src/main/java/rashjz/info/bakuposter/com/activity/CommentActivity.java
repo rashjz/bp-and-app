@@ -92,10 +92,7 @@ public class CommentActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-//                        comment = JsonUtil.downloadContentItemData(response);
-//                        adapter.setData(movieList);
-//                        adapter.notifyDataSetChanged();
-//                        System.out.println(" ------------ " + item.getComments().size());
+
                     }
                 },
                 new Response.ErrorListener() {
@@ -108,7 +105,7 @@ public class CommentActivity extends AppCompatActivity {
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
 //                params.put("Content-Type", "application/json");
-                params.put("Authorization", "xxxxxxxxxxxxxx==");
+                params.put(Config.headerParamName, Config.headerParam);
                 return params;
             }
         };
