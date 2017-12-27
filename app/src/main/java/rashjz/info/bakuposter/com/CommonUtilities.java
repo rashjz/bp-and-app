@@ -6,9 +6,9 @@ import android.content.Intent;
 public final class CommonUtilities {
 
     // give your server registration url here
-    public static final String SERVER_URL = "http://78.46.139.155:8075/Bakuposter-ws/bakufun/";
+    public static final String SERVER_URL = "";
     // Google project id
-    public static final String SENDER_ID = "3096103126";
+    public static final String SENDER_ID = "";
     public static final String TAG = "BAKUPOSTER";
 
     public static final String DISPLAY_MESSAGE_ACTION = "rashjz.info.bakuposter.com.DISPLAY_MESSAGE";
